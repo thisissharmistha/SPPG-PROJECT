@@ -17,3 +17,26 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
+// //=================== Show & Hide NAV Menu for Tablets & PHONE ===================
+
+// //====== Show NAV Menu =======
+
+const menu = document.querySelector(".nav_menu");
+const menuBtn = document.querySelector("#open-menu-btn");
+const closeBtn = document.querySelector("#close-menu-btn");
+
+menuBtn.addEventListener("click", () => {
+  closeBtn.style.display = "contents";
+  menuBtn.style.display = "none";
+  menu.style.display = "flex";
+});
+
+//======== Hide NAV Menu =======
+
+closeBtn.addEventListener("click", () => {
+  menu.style.display = "none";
+  closeBtn.style.display = "none";
+  menuBtn.style.display = "contents";
+});

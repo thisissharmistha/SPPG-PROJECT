@@ -1016,6 +1016,7 @@ footer ul li a:hover {
     box-shadow: var(--box-shadow1);
     float: left;
     padding: 1rem;
+    left: 0;
   }
 
   .nav_menu li {
@@ -1146,7 +1147,8 @@ footer ul li a:hover {
   }
 
   .footer_container {
-    grid-template-columns: repeat(2, 1fr);
+    padding: 0 0.5rem;
+    grid-template-columns: 1fr 1.5fr;
     gap: 1rem;
   }
 
