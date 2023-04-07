@@ -95,10 +95,35 @@
     <section class="container form-wrapper"> 
       <div class="section_header">CONTACT FORM</div>
       <div class="form">
-        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdf7WE-kMTKkQJzCAEg9IIb2S75nB96m0zQihyM8xpsP6sp0Q/viewform?embedded=true" width="700" height="900" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+        <form>
+          <fieldset>
+            <legend>Fields marked with * are required</legend>
+
+            <div id="part-1">
+              <label for="name" id="name">Name</label>
+              <input type="text" name="name" id="name" placeholder="Full Name" required>
+            </div>
+
+            <div id="part-2">
+              <label for="email" id="email">Email</label>
+              <input type="email" name="email" placeholder="account@email.com" id="email" required>
+            </div>
+            
+            <div id="part-3">
+              <label for="message" id="message">Query</label>
+              <textarea rows="" cols="50" id="message" tabindex="-1" placeholder="Type your queries here..."></textarea>
+            </div>
+
+            <div class="form-buttons">
+              <button class="btn submit" id="submitForm"><input type="submit" id="submitButton" name="submitButton" value="Submit"></button>
+               <button class="btn reset" id="clearForm"><input type="reset" id="resetButton" value="Reset" tabindex="-1" ></button>
+            </div>
+          </fieldset>
+        </form>
       </div>
     </section> 
-    <!-- ============================ End OF GOOGLE CONTACT FORM========================= -->
+
+    <!-- ============================ End OF CONTACT FORM========================= -->
 
 
     <footer>
