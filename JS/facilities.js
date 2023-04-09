@@ -25,3 +25,12 @@ function myFunction() {
     navbar.classList.remove("sticky");
   }
 }
+
+
+// ================ FLIP CARD on click only for tablets and mobiles============
+var card = document.querySelector(".flip-card-inner");
+function flipCard(card) {
+  card.classList.toggle("flipped");
+}
+
+

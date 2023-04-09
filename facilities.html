@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -23,45 +23,34 @@
   <body>
 
     <header>
-
-      <div class="top-message" id="top-message">
-        <span>Please contact us to access any of the facilities and softwares on a collaboration basis.</span>
-        <button class="close-msg" onclick="closeTopMsg()">
-          <i class='bx bx-x'></i>
-        </button>
-      </div>
-
-
-      <div class="container header_container">
-
+      <div class="header_container">
+    
         <ul>
-          <li><img src="./images/final_logo.png"></li>
+          <li><img src="images/logo_&_group-poster/final_logo.png"></li>
           <li>
             <h2>STRUCTURE PROPERTY PROCESSING GROUP</h2>
-            <p>Materials Science Centre, Indian Institute of Technology, Kharagpur, India</p>
+            <p>Materials Science Center, Indian Institute of Technology, Kharagpur, India</p>
           </li>
-          <li><img src="./images/IIT-Kharagpur-01.png"></li>
+          <li><img src="images/logo_&_group-poster/IIT-Kharagpur-01.png"></li>
         </ul>
     
       </div>
     </header>
-    <!-- ============================ End OF HEADER ========================= -->
+    <!-- ============================ End OF HEADER========================= -->
 
 
     <nav id="navbar">
-      <div class="container">
-        <div class="nav_container">
-          <ul class="nav_menu">
-            <li><a href="index.html" class="btn">Home</a></li>
-            <li><a href="members.html" class="btn">Members</a></li>
-            <li><a href="research.html" class="btn">Research</a></li>
-            <li><a href="facilities.html" class="btn active">Facilities</a></li>
-            <li><a href="contact.html" class="btn ">Contact</a></li>
-          </ul>
-
-          <button id="open-menu-btn"><i class='bx bx-menu'></i></button>
-          <button id="close-menu-btn"><i class='bx bx-x'></i></button>
-        </div>
+      <div class="container navbar_buttons">
+        <div id="open-menu-btn"><i class='bx bx-menu'></i></div>
+        <div id="close-menu-btn"><i class='bx bx-x'></i></div>
+        <ul class="nav_menu">
+          <li><a href="index.html" class="btn">Home</a></li>
+          <li><a href="members.html" class="btn">Members</a></li>
+          <li><a href="research.html" class="btn">Research</a></li>
+          <li><a href="facilities.html" class="btn active">Facilities</a></li>
+          <li><a href="contact.html" class="btn ">Contact</a></li>
+        </ul>
+    
       </div>
     </nav>
     <!-- =========================== End OF NAVBAR =========================== -->
@@ -70,13 +59,12 @@
     <section class="lab_facilities">
       <div class="section_header">LAB FACILITIES</div>
 
-      <div>
         <div class="container metalography_container">
           <div class="section_header">Metallography</div>
           <div class="metallography_content">
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Metallography/1_grinder.jpeg" alt="">
@@ -103,7 +91,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Metallography/0_low_speed_cutter.jfif" alt="">
@@ -130,7 +118,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Metallography/2_hot_mounting_machine.jfif" alt="">
@@ -153,7 +141,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Metallography/3_mechanical_polishing_machine.jpeg" alt="">
@@ -175,7 +163,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Metallography/4_vibromet.jpg" alt="">
@@ -200,7 +188,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Metallography/5_fume_chamber.jfif" alt="">
@@ -222,7 +210,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Metallography/Abrasive cutter.JPG" alt="">
@@ -246,9 +234,8 @@
 
           </div>
         </div>
-      </div>
 
-      <!-- =========================== End OF METALLOGRAPHY =========================== -->
+      <!-------------End OF METALLOGRAPHY ---------------->
 
 
       <section>
@@ -257,7 +244,7 @@
           <div class="microscopy_content">
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Microscopy/6_optical_microscope.jpeg" alt="">
@@ -280,7 +267,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Microscopy/7_optical_microscope_with_heating_stage.jfif" alt="">
@@ -303,7 +290,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/Microscopy/8_OM.jpeg" alt="">
@@ -326,8 +313,7 @@
           </div>
         </div>
       </section>
-    
-      <!-- =========================== End OF MICROSCOPY =========================== -->
+      <!------------------ End OF MICROSCOPY -------->
 
 
       <section>
@@ -336,7 +322,7 @@
           <div class="mechanical-testing_content">
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MechanicalTesting/10_scratch_tester.jfif" alt="">
@@ -363,7 +349,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MechanicalTesting/8_microhardness_tester.jfif" alt="">
@@ -388,7 +374,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MechanicalTesting/9_macrohardness_tester.jpg" alt="">
@@ -412,7 +398,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MechanicalTesting/UTM with HT furnace setup2.png" alt="">
@@ -437,7 +423,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MechanicalTesting/15_micro_UTM.jpeg" alt="">
@@ -461,8 +447,7 @@
           </div>
         </div>
       </section>
-
-      <!-- =========================== End OF MECHANICAL TESTING =========================== -->
+      <!------------- End OF MECHANICAL TESTING ------------->
 
       <section>
         <div class="container advanced-structural_container">
@@ -470,7 +455,7 @@
           <div class="advanced-structural_content">
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/AdvancedStructuralCharacterization/3_sem.jpg" alt="">
@@ -491,7 +476,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/AdvancedStructuralCharacterization/evo_sem.jpeg" alt="">
@@ -515,7 +500,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/AdvancedStructuralCharacterization/Merlin.png" alt="">
@@ -535,7 +520,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/AdvancedStructuralCharacterization/fib-feg-sem.JPG" alt="">
@@ -558,7 +543,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/AdvancedStructuralCharacterization/2_x_ray_diffractometer.jpg" alt="">
@@ -582,9 +567,7 @@
           </div>
         </div>
       </section>
-
-
-      <!-- =========================== End OF ADVANCED STRUCTURAL & MICROSCRUCTURAL CHARACTERIZATION =========================== -->
+      <!---------- End OF ADVANCED STRUCTURAL & MICROSCRUCTURAL CHARACTERIZATION ------------>
 
 
       <section>
@@ -593,7 +576,7 @@
           <div class="heat-treatment__content">
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/HeatTreatment/Muffle2.png" alt="">
@@ -614,7 +597,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/HeatTreatment/HT-muffle2.png" alt="">
@@ -637,7 +620,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/HeatTreatment/Tube-furnace2.png" alt="">
@@ -661,7 +644,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/HeatTreatment/microwave_furnace.png" alt="">
@@ -685,7 +668,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/HeatTreatment/Calcination-furnace2.png" alt="">
@@ -705,7 +688,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/HeatTreatment/HT-electric-furnace2.png" alt="">
@@ -726,9 +709,7 @@
           </div>
         </div>
       </section>
-
-      <!-- =========================== End OF HEAT TREATMENT =========================== -->
-
+      <!------------ End OF HEAT TREATMENT ------------>
 
       <section>
         <div class="container melting-facilities_container">
@@ -736,7 +717,7 @@
           <div class="melting-facilities__content">
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MeltingFacilities/Vacuum-arc-melting2.png" alt="">
@@ -758,7 +739,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MeltingFacilities/Glass-melting-furnace2.png" alt="">
@@ -782,7 +763,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MeltingFacilities/Induction-melting-furnace2.png" alt="">
@@ -804,8 +785,7 @@
           </div>
         </div>
       </section>
-
-      <!-- =========================== End OF Melting facilities =========================== -->
+      <!-- --------- End OF Melting facilities ------------>
 
 
       <section>
@@ -814,7 +794,7 @@
           <div class="materials-processing__content">
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MaterialsProcessing/planetary_ball_mill.jpeg" alt="">
@@ -839,7 +819,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MaterialsProcessing/mechanical_hydraulic_press.jpeg" alt="">
@@ -859,7 +839,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MaterialsProcessing/automatic_hydraulic_press.jpeg" alt="">
@@ -884,7 +864,7 @@
 
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MaterialsProcessing/mechanical_convection_oven.jpeg" alt="">
@@ -904,7 +884,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/MaterialsProcessing/Magnetic-stirrer.png" alt="">
@@ -930,8 +910,7 @@
           </div>
         </div>
       </section>
-
-      <!-- =========================== End OF Materials processing =========================== -->
+      <!--------- End OF Materials processing ---------- -->
 
       <section>
         <div class="container electrical-testing_container">
@@ -939,7 +918,7 @@
           <div class="electrical-testing__content">
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/ElectricalTesting/precision_impedance_analyzer.jpeg" alt="">
@@ -961,7 +940,7 @@
             </div>
 
             <div class="flip-card">
-              <div class="flip-card-inner">
+              <div class="flip-card-inner" onclick="flipCard(this)">
                 <div class="flip-card-front">
                   <figure>
                     <img src="images/ElectricalTesting/refractometer.jpeg" alt="">
@@ -991,10 +970,9 @@
           </div>
         </div>
       </section>
+     <!------------ End OF Electrical testing ------------>
 
-     <!-- =========================== End OF Electrical testing =========================== -->
     </section>
-
     <!-- =========================== End OF LAB FACILITIES =========================== -->
 
 
@@ -1013,66 +991,75 @@
         </div>
       </div>
     </section>
-
     <!-- =========================== End OF SOFTWARES =========================== -->
 
     <footer>
-      <div class="container footer_container">
-
-        <div class="footer_1">
-          <a href="index.html"><h4>SPP GROUP</h4></a>
-          <a href="index.html" class="footer_logo"><img src="images/logo_Lab.png" alt=""></a>
-          <p>Materials Science Centre,<br>
-            IIT Kharagpur, India.</p>
-        </div>
-
-        <div class="footer_2">
-          <h4>Permalinks</h4>
-          <ul class="permalinks">
-            <li><a href="#top">Top</a></li>
-            <li><a href="research.html">Research</a></li>
-            <li><a href="contact.html">Contact</a></li>
-          </ul>
-        </div>
-
-
-        <div class="footer_3">
-          <h4>Campus</h4>
-          <ul class="campus">
-            <li><a href="facilities.html">Lab Facilities</a></li>
-            <li><a href="members.html">Group Members</a></li>
-          </ul>
-        </div>
-
-
-        <div class="footer_4">
-          <h4>Contact Us</h4>
-          <div>
-            <p><i class='bx bx-envelope'></i><a href="mailto:sppgroup.iitkgp@gmail.com">sppgroup.iitkgp@gmail.com</a></p>
-            <p><i class='bx bx-phone' ></i>+91 03222 281 650</p>
-            <!-- <p><i class='bx bx-printer' ></i>FAX: +91 3222 255303</p> -->
+      <div class="container">
+        <div class="footer_container">
+    
+          <div class="footer_1">
+            <a href="index.html">
+              <h4>SPP GROUP</h4>
+            </a>
+            <ul class="spp-group">
+              <li><a href="index.html" class="footer_logo"><img src="images/logo_&_group-poster/final_logo.png" alt=""></a>
+              </li>
+              <li>
+                <p>Materials Science Centre,</p>
+                <p>IIT Kharagpur, India.</p>
+              </li>
+            </ul>
           </div>
-
-          <!-- ------------------FOR SOCIAL HANDELS--------------------------->
-
+    
+          <div class="footer_2">
+            <h4>Permalinks</h4>
+            <ul class="permalinks">
+              <li><a href="#top">Home</a></li>
+              <li><a href="#about_us">About</a></li>
+              <li><a href="research.html">Research</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+    
+    
+          <div class="footer_3">
+            <h4>Campus</h4>
+            <ul class="campus">
+              <li><a href="facilities.html">Lab Facilities</a></li>
+              <li><a href="members.html">Group Members</a></li>
+            </ul>
+          </div>
+    
+    
+          <div class="footer_4">
+            <h4>Contact Us</h4>
+            <ul class="contact_us">
+              <li>
+                <p><i class='bx bx-envelope'></i><a href="mailto:sppgroup.iitkgp@gmail.com">sppgroup.iitkgp@gmail.com</a>
+                </p>
+              </li>
+              <li>
+                <p><i class='bx bx-phone'></i> +91 03222 281 650</p>
+              </li>
+            </ul>
+          </div>
+    
+          <!-- ------------------ FOR SOCIAL HANDELS --------------------------->
           <ul class="footer_socials">
-            <li><a href="https://www.youtube.com/@spplab-iitkharagpur3991" target="_blank"><i class='bx bxl-youtube'></i></a></li>
-            <!-- <li><a href="#"><i class='bx bxl-instagram' ></i></a></li>
-            <li><a href="#"><i class='bx bxl-twitter' ></i></a></li> -->
-            <!-- <li><a href="#" target="_blank"><i class='bx bxl-linkedin-square' ></i></a></li> -->
+            <li><a href="https://www.youtube.com/@spplab-iitkharagpur3991" target="_blank"><i
+                  class='bx bxl-youtube'></i></a></li>
           </ul>
-
-
+    
+    
         </div>
       </div>
-
+    
       <div class="footer_copyright">
-        <small style ="color:aliceblue;">Copyright &copy; SPP GROUP | IIT KHARAGPUR</small>
+        <small style="color:aliceblue;">Copyright &copy; SPP GROUP | IIT KHARAGPUR</small>
       </div>
-
+    
     </footer>
-
-    <!-- ====================== END OF FOOTER ======================= -->
+    <!-- ====================== END OF FOOTER======================= -->
     
 
     <!-- ============ MAIN JS ============= -->
