@@ -238,15 +238,13 @@ header {
 
 .research-wrapper {
   width: 100%;
-  height: 30rem;
-  background: var(--color-white);
+  height: auto;
   display:flex;
   justify-content:space-between;
   align-items: center;
   color: var(--color-primary);
   background: none;
-  /* background: var(--color-lightBlue-variant); */
-
+  padding: 1rem;
 }
 
 .research-wrapper figure {
@@ -271,7 +269,6 @@ header {
 }
 
 .research-wrapper .description p {
-  font-size: 1rem;
   font-weight: 500;
   padding: 1rem 0;
   font-size: 1.2rem;
@@ -285,6 +282,7 @@ header {
   background: var(--color-lightBlue-variant);
   margin: 2rem auto;
   padding: 1rem;
+  overflow: hidden;
 }
 
 .research-insights .research-insights-swiper {
@@ -313,107 +311,6 @@ header {
 }
 
 /* ================== ONGOING WORK  ==================*/
-
-/* .ongoing-work-wrapper {
-  margin-bottom: 3rem;
-}
-
-.ongoing-work-wrapper .section_header {
-  margin-bottom: 1rem;
-}
-
-.grid {
-  display: grid;
-  gap: 1.5rem;
-}
-
-.ongoing-work-content {
-  background: var(--color-lightBlue-variant);
-  width: 100%;
-  box-shadow: var(--box-shadow1);
-}
-
-.ongoing-work-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  justify-content: space-between;
-  gap: 0rem;
-  padding: 1rem 0;
-  text-align: center;
-}
-
-.ongoing-work-icon,
-.ongoing-work-arrow {
-  font-size: 2rem;
-  color: var(--color-primary);
-  align-self: flex-start;
-}
-
-.ongoing-work-open .ongoing-work-list {
-  height: max-content;
-  margin-bottom: 2.5rem;
-}
-
-.ongoing-work-list {
-  row-gap: 1.5rem;
-}
-
-.ongoing-work-title {
-  font-size: 1.2rem;
-}
-
-.ongoing-work-subtitle {
-  font-weight: 600;
-}
-
-.ongoing-work-img {
-  display: flex;
-  align-items: baseline;
-  justify-content: center;
-  margin: 1rem 0;
-  gap: 3rem;
-}
-
-.ongoing-work-img img {
-  width: 16rem;
-  object-fit: contain;
-}
-
-.ongoing-work-bar {
-  height: 3px;
-  margin-bottom: 1rem;
-}
-
-.ongoing-work-bar {
-  background: var(--color-primary);
-}
-
-.ongoing-work-description {
-  text-align: justify;
-  padding: 0 2rem;
-}
-
-.ongoing-work-close .ongoing-work-list {
-  height: 0;
-  overflow: hidden;
-  margin-bottom: 2rem;
-}
-
-.ongoing-work-open .ongoing-work-list {
-  height: max-content;
-  padding-bottom: 2rem;
-}
-
-.ongoing-work-open .ongoing-work-arrow {
-  transform: rotate(-180deg);
-} */
-
-
-
-
-
 .ongoing-work-wrapper {
   margin-bottom: 3rem;
 }
@@ -519,6 +416,7 @@ header {
 .feaured_work_wrapper {
   background: var(--color-lightBlue-variant);
   padding: 1rem 0;
+  overflow: hidden;
 }
 
 .featured-work-container {
@@ -804,3 +702,193 @@ footer ul li a:hover {
 }
 
 /* ================== media query TABLETS ==================*/
+/* tablet portrait*/
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+
+  .container {
+    max-width: var(--container-max-width-md);
+    width: var(--container-width-md);
+  }
+
+  body {
+    position: relative;
+    clear: both;
+  }
+
+  section {
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.3rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 8rem;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .btn_type2 {
+    width: 8rem;
+  }
+
+  .section_header {
+    font-size: 1.65rem;
+  }
+
+  /* --------------- HEADER -----------------*/
+  .header_container ul li:nth-child(1) img {
+    width: 7rem;
+  }
+
+  .header_container ul li p {
+    font-weight: 600;
+  }
+
+  .header_container ul li:nth-child(3) img {
+    width: 4.5rem;
+  }
+
+
+  /* ================== NAVBAR ==================*/
+  #navbar {
+    position: relative;
+    overflow: visible;
+    z-index: 99;
+    height: 2rem;
+  }
+
+  .navbar_buttons {
+    height: inherit;
+  }
+
+  #navbar #open-menu-btn,
+  #navbar #close-menu-btn {
+    display: contents;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-white);
+    cursor: pointer;
+    animation: animateNavItems 400ms linear forwards;
+  }
+
+  #navbar #close-menu-btn {
+    display: none;
+  }
+
+  .nav_menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--color-transparent-white);
+    box-shadow: var(--box-shadow1);
+    float: left;
+    padding: 1rem;
+    left: 0;
+  }
+
+  .nav_menu li {
+    animation: animateNavItems 400ms linear forwards;
+    transform-origin: top left;
+    opacity: 0;
+    margin: 0.4rem auto;
+    z-index: 111;
+  }
+
+  .nav_menu li .btn {
+    width: 15rem;
+    font-size: 0.8rem;
+  }
+
+  /* -------linked with activePage JS --------- */
+  #navbar .nav_menu li a:is(:link, :active, :visited).active {
+    background: var(--color-primary);
+    border-bottom: none;
+  }
+
+  #navbar ul>li .btn:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  /* ----------- nav menu animation ---------- */
+  .nav_menu li:nth-child(2) {
+    animation-delay: 200ms;
+  }
+
+  .nav_menu li:nth-child(3) {
+    animation-delay: 400ms;
+  }
+
+  .nav_menu li:nth-child(4) {
+    animation-delay: 600ms;
+  }
+
+  .nav_menu li:nth-child(5) {
+    animation-delay: 800ms;
+  }
+
+  @keyframes animateNavItems {
+    from {
+      transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+    }
+
+    to {
+      transform: rotateZ(0) rotateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* ================== ABOUT RESEARCH ==================*/
+  .research-wrapper figure img {
+    width: 20rem;
+  }
+
+  .research-wrapper .description p {
+    font-size: 0.90rem;
+    font-weight: 500;
+    padding: 1rem 0;
+  }
+
+
+  /* ================== FOOTER ==================*/
+
+  .footer_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    font-size: 1.1rem;
+    padding: 0 2rem;
+  }
+
+  .footer_container>div h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-yellow);
+  }
+
+}

@@ -19,29 +19,30 @@ function myFunction() {
 }
 
 
+// //=================== Show & Hide NAV Menu for Tablets & PHONE ===================
+// //====== Show NAV Menu =======
+
+const menu = document.querySelector(".nav_menu");
+const menuBtn = document.querySelector("#open-menu-btn");
+const closeBtn = document.querySelector("#close-menu-btn");
+
+menuBtn.addEventListener("click", () => {
+  closeBtn.style.display = "contents";
+  menuBtn.style.display = "none";
+  menu.style.display = "flex";
+});
+
+//======== Hide NAV Menu =======
+
+closeBtn.addEventListener("click", () => {
+  menu.style.display = "none";
+  closeBtn.style.display = "none";
+  menuBtn.style.display = "contents";
+});
+
+
+
 //=================== ACCORDIAN ONGOING RESEARCH ===================
-// const ongoingWorkContent = document.getElementsByClassName(
-//     "ongoing-work-content"
-//   ),
-//   ongoingWorkHeader = document.querySelectorAll(".ongoing-work-header");
-
-
-// function togggleOngoingWork() {
-//   let itemClass = this.parentNode.className;
-
-//   for (i = 0; i < ongoingWorkContent.length; i++) {
-//     ongoingWorkContent[i].className = "ongoing-work-content ongoing-work-close";
-//   }
-
-//   if (itemClass === "ongoing-work-content ongoing-work-close") {
-//     this.parentNode.className = "ongoing-work-content ongoing-work-open";
-//   }
-// }
-
-// ongoingWorkHeader.forEach((el) => {
-//   el.addEventListener("click", togggleOngoingWork);
-// });
-
 
 // Get all accordion headers
 const accordionHeaders = document.querySelectorAll(".ongoing-work-header");
