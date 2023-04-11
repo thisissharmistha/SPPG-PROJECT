@@ -278,37 +278,40 @@ header {
 
 .research-insights {
   width: 100%;
-  height: 38rem;
   background: var(--color-lightBlue-variant);
-  margin: 2rem auto;
-  padding: 1rem;
   overflow: hidden;
 }
 
-.research-insights .research-insights-swiper {
-  width: 90rem;
-  height: 31rem;
-  margin: 2rem auto 0 auto;
+#research-insights-swiper {
+  width: 98%;
+  height: 33rem;
+  margin:1rem auto;
   background: none;
+  position: relative;
 }
 
-.research-insights-swiper-wrapper figure {
-  height: 28rem;
+.research-insights-swiper-wrapper .research-swiper-slide figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
   background: var(--color-primary);
 }
 
-.research-insights-swiper-wrapper figure img {
-  width: 40rem;
-  margin: 1rem auto;
+.research-insights-swiper-wrapper .research-swiper-slide figure img {
+  width: 45rem;
+  height: 25rem;
   object-fit: contain;
+  margin: 0;
 }
 
-.research-insights .research-insights-swiper figure figcaption {
-  margin: auto auto;
+ .research-insights-swiper-wrapper .research-swiper-slide figure figcaption {  
   color: var(--color-white);
   font-size: 1.2rem;
   font-weight: 600;
 }
+
 
 /* ================== ONGOING WORK  ==================*/
 .ongoing-work-wrapper {
@@ -354,7 +357,11 @@ header {
   align-items: flex-start;
 }
 
-.subtitle {
+.ongoing-work-title .title {
+  text-align: left;
+}
+
+.ongoing-work-title .subtitle {
   font-weight: 600;
 }
 
@@ -425,14 +432,9 @@ header {
   height: auto;
 }
 
-.featured-work-swiper, .swiper, .mySwiper {
-  height: 32rem !important;
-}
-
 .featured-work-swiper {
-  width: 75rem;
-  height: 33rem;
-  margin: 0 auto;
+  width: 95%;
+  height: 30rem;
 }
 
 .subheader {
@@ -440,25 +442,22 @@ header {
   margin: 1rem auto;
 }
 
-.featured-work-swiper-wrapper {
-  width: 75rem;
-  height: 20rem;
-}
-
-.featured-work-swiper-wrapper figure {
-  height: 26rem;
+.featured-work-swiper-wrapper .swiper-slide figure {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   background: var(--color-lightBlue-variant);
-}
-.featured-work-swiper-wrapper figure img {
-  width:35rem;
-  object-fit: contain;
-  margin: 1rem auto;
+  padding: 1rem 1rem 0 1rem;
 }
 
-.featured-work-swiper-wrapper figure figcaption {
+.featured-work-swiper-wrapper .swiper-slide figure img {
+  width:32rem;
+  height: 18rem;
+  object-fit: contain;
+  margin: 0 auto;
+}
+
+.featured-work-swiper-wrapper .swiper-slide figure figcaption {
   margin: 0.50rem auto;
   height: fit-content;
 }
@@ -482,8 +481,8 @@ header {
 }
 
 .book-details {
-  width: 75rem;
-  height: fit-content;
+  width: 95%;
+  height: auto;
   margin: auto;
   padding: 2rem 0;
 }
@@ -496,7 +495,7 @@ header {
 }
 
 .book-details figure a, .book-details figure figcaption {
-  width: 50%;
+  width: 49%;
   height: max-content;
 }
 
@@ -509,7 +508,7 @@ header {
   color: var(--color-white);
   font-weight: 500;
   font-size: 1.1rem;
-  text-align: left;
+  text-align: justify;
 }
 
 
@@ -726,11 +725,11 @@ footer ul li a:hover {
   }
 
   h2 {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
   }
 
   h3 {
-    font-size: 1.4rem;
+    font-size: 1.3rem;
   }
 
   h4 {
@@ -778,7 +777,7 @@ footer ul li a:hover {
     position: relative;
     overflow: visible;
     z-index: 99;
-    height: 2rem;
+    height: 3rem;
   }
 
   .navbar_buttons {
@@ -788,7 +787,7 @@ footer ul li a:hover {
   #navbar #open-menu-btn,
   #navbar #close-menu-btn {
     display: contents;
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: 600;
     color: var(--color-white);
     cursor: pointer;
@@ -797,6 +796,7 @@ footer ul li a:hover {
 
   #navbar #close-menu-btn {
     display: none;
+    font-size: 3rem;
   }
 
   .nav_menu {
@@ -809,7 +809,6 @@ footer ul li a:hover {
     box-shadow: var(--box-shadow1);
     float: left;
     padding: 1rem;
-    left: 0;
   }
 
   .nav_menu li {
@@ -821,13 +820,12 @@ footer ul li a:hover {
   }
 
   .nav_menu li .btn {
-    width: 15rem;
-    font-size: 0.8rem;
+    width: 20rem;
   }
 
-  /* -------linked with activePage JS --------- */
   #navbar .nav_menu li a:is(:link, :active, :visited).active {
     background: var(--color-primary);
+    color: none;
     border-bottom: none;
   }
 
@@ -864,15 +862,25 @@ footer ul li a:hover {
     }
   }
 
-  /* ================== ABOUT RESEARCH ==================*/
+  /* ============== About Research ============ */
+  .research-wrapper {
+    padding: 0;
+  }
+
   .research-wrapper figure img {
     width: 20rem;
   }
 
   .research-wrapper .description p {
-    font-size: 0.90rem;
-    font-weight: 500;
-    padding: 1rem 0;
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  /* ============== RESEARCH INSIGHTS & FEATURED WORKS ============ */
+  .research-insights .research-insights-swiper {
+    width: 90rem;
+    height: 20rem;
+    margin: 1rem auto 0 auto;
   }
 
 
