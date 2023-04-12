@@ -66,4 +66,30 @@ closeBtn.addEventListener("click", () => {
 });
 
 
+//=================== Accordian For Alumni Interns ===================
+// only for small screens (300px-600px)
 
+
+// Get all accordion headers
+const alumniInternsAccordionHeaders = document.querySelectorAll(
+  ".alumni-interns-accordian-header"
+);
+
+// Add click event listener to each header
+alumniInternsAccordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    // Toggle the active class on the header
+    header.classList.toggle("active");
+
+    // Toggle the active class on the toggle icon
+    const toggleIcon = header.querySelector("i");
+    toggleIcon.classList.toggle("fa-angle-down");
+    toggleIcon.classList.toggle("fa-angle-up");
+
+    // Get the sibling content element
+    const accordionContent = header.nextElementSibling;
+
+    // Toggle the active class on the content element
+    accordionContent.classList.toggle("active");
+  });
+});

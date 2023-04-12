@@ -542,7 +542,7 @@ header {
 .funding_collaborators h2 {
   color: var(--color-primary);
 }
-
+/* icon hidden as it is only applicable for small screens (300px-600px) */
   .funding_collaborators-accordian-header i {
     display: none;
   }

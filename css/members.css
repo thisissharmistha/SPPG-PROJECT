@@ -463,6 +463,11 @@ header {
   font-weight: 500;
 }
 
+/* icon hidden as it is only applicable for small screens (300px-600px) */
+.alumni-interns-accordian-header i {
+  display: none;
+}
+
 /* ================== FOOTER ==================*/
 
 footer {
@@ -1109,7 +1114,20 @@ footer ul li a:hover {
   /* --------- tab2 INTERNS ---------- */
 
   .interns-wrapper {
+    margin: 0 auto 1.5rem auto;
+    padding: 1rem;
+    border-bottom: 8px solid var(--color-primary);
+    background: var(--color-lightBlue-variant);
+  }
+
+  .interns-wrapper .section_header {
     margin: 0 auto 1rem auto;
+  }
+
+  .interns-wrapper .interns {
+    background: var(--color-primary);
+    height: auto;
+    padding: 1rem 2rem;
   }
 
   .interns-wrapper .interns ul {
@@ -1121,6 +1139,35 @@ footer ul li a:hover {
     font-size: 0.75rem;
   }
 
+
+  /* ------------ Accordian Style for alumni interns ------- */
+  .alumni-interns-accordian-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 89% 9%;
+    gap: 1%;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+
+  .alumni-interns-accordian-header i {
+    display: block;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .alumni-interns-accordian-header i.fa-angle-up {
+    transform: rotate(180deg);
+  }
+
+  .alumni-interns-accordian-content {
+    display: none;
+  }
+
+  .alumni-interns-accordian-content.active {
+    display: block;
+  }
 
   /* ================== FOOTER ==================*/
   footer {
