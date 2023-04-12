@@ -66,4 +66,27 @@ accordionHeaders.forEach((header) => {
   });
 });
 
+//=================== acc ===================
+// Get all accordion headers
+const fundingCollaboratorsAccordionHeaders = document.querySelectorAll(
+  ".funding_collaborators-accordian-header"
+);
 
+// Add click event listener to each header
+fundingCollaboratorsAccordionHeaders.forEach((header) => {
+  header.addEventListener("click", () => {
+    // Toggle the active class on the header
+    header.classList.toggle("active");
+
+    // Toggle the active class on the toggle icon
+    const toggleIcon = header.querySelector("i");
+    toggleIcon.classList.toggle("fa-angle-down");
+    toggleIcon.classList.toggle("fa-angle-up");
+
+    // Get the sibling content element
+    const accordionContent = header.nextElementSibling;
+
+    // Toggle the active class on the content element
+    accordionContent.classList.toggle("active");
+  });
+});
