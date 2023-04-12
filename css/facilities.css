@@ -372,6 +372,11 @@ header {
   transform: none;
 }
 
+/* accordian header icon for small screen (300px-600px) */
+.lab_facilities-accordian-header i {
+  display: none;
+}
+
 /* ============= SOFTWARES ================== */
 
 .software_container {
@@ -917,7 +922,7 @@ footer ul li a:hover {
   .melting-facilities_container,
   .materials-processings_container,
   .electrical-testing_container {
-    padding: 0.5rem;
+    padding: 1rem;
   }
 
   .metalography_container .section_header,
@@ -991,6 +996,35 @@ footer ul li a:hover {
   /* Used click-event to flip the cards with JS for small screens */
   .flipped {
     transform: rotateY(180deg) !important;
+  }
+
+  /* ----- Accordian Lab facilities styling ------ */
+  .lab_facilities-accordian-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 89% 9%;
+    gap: 1%;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+
+  .lab_facilities-accordian-header i {
+    display: block;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .lab_facilities-accordian-header i.fa-angle-up {
+    transform: rotate(180deg);
+  }
+
+  .lab_facilities-accordian-content {
+    display: none;
+  }
+
+  .lab_facilities-accordian-content.active {
+    display: block;
   }
 
   /* ============= SOFTWARES ================== */

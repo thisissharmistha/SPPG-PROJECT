@@ -66,7 +66,10 @@ accordionHeaders.forEach((header) => {
   });
 });
 
-//=================== acc ===================
+//=================== Accordian For Funding and Collaborators ===================
+// only for small screens (300px-600px)
+
+
 // Get all accordion headers
 const fundingCollaboratorsAccordionHeaders = document.querySelectorAll(
   ".funding_collaborators-accordian-header"
