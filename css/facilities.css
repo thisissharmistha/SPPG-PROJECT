@@ -355,11 +355,12 @@ header {
   background: var(--color-primary);
   color: var(--color-yellow);
   transform: rotateY(180deg);
-  padding: 0.6rem 0;
+  padding: 1rem 1.5rem;
+  text-align: left;
 }
 
 .flip-card-back ul {
-  padding: 1rem 1.5rem;
+  padding: 1rem 0;
 }
 
 .flip-card-back ul li {
