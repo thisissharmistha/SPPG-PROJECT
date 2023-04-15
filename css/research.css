@@ -1264,6 +1264,10 @@ footer ul li a:hover {
   }
 
   /* ================== ONGOING WORK  ==================*/
+  section {
+    text-align: left;
+  }
+
   .ongoing-work-wrapper {
     margin-bottom: 1rem;
   }
