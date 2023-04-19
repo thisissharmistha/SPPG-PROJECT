@@ -386,6 +386,7 @@ header {
 .member figure figcaption h4, .member figure figcaption a {
   margin-top: 0.5rem;
   font-weight: 500;
+  font-size: 1.1rem;
 }
 
 /* --------- tab2 ---------- */
