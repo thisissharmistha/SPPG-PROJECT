@@ -25,6 +25,9 @@
   </head>
   <body>
 
+    <div id="preloader">
+    </div>
+
     <header>
       <div class="header_container">
 
@@ -57,28 +60,61 @@
     </nav>
     <!-- =========================== End OF NAVBAR =========================== -->
 
+    <section class="hero-section">
 
-    <div class="swiper mySwiper">
-
-      <div class="sliders swiper-wrapper">
-
-        <div class="swiper-slide slider">
-          <img src="images/home-page-assets/lab_pictures/slider04.JPG" alt="">
-          <!-- <p>TAGLINE GOES HERE</p> -->
-          <!-- <a href="#" target="_blank" class="btn-primary">Read More</a> -->
+      <div class="slider">
+        <!-- Slideshow container -->
+        <div class="slideshow-container">
+        
+          <!-- Full-width images with number and caption text -->
+          <div class="mySlides fade">
+            <img src="images/home-page-assets/lab_pictures/slider04.JPG" style="width:100%">
+          </div>
+        
+          <div class="mySlides fade">
+            <img src="images/home-page-assets/lab_pictures/slider07.JPG" style="width:100%">
+          </div>
+        
+        
+          <!-- Next and previous buttons -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-
-        <div class="swiper-slide slider">
-          <img src="images/home-page-assets/lab_pictures/slider01.JPG" alt="">
-          <!-- <p>TAGLINE GOES HERE</p> -->
-          <!-- <a href="#" target="_blank" class="btn-primary">Read More</a> -->
-        </div>
-
       </div>
-      
-      <span class="swiper-pagination"></span>
 
-    </div>
+
+      <!-- group updates -->
+      <div class="news_events">
+        <div class="section_header">GROUP UPDATES</div>
+        <div class="news_events_wrapper">
+          <div class="news_events_container">
+            <ul>
+              <li>
+                <p>Project on Development of wrought Al-Cu-Mn-Zr (ACMZ) alloys for high temperature (above 350degC)
+                  applications through SERB approved.</p>
+              </li>
+              <li>
+                <p>Welcome Aniket Dutta (Project scientist-Research) to SPP group.</p>
+              </li>
+              <li>
+                <p>Congratulations Souvik Sahoo for joining Post doc at IMDEA.</p>
+              </li>
+              <li>
+                <p>Congratulations to Prof. Shibayan on being selected for Fulbright-Nehru Academic and Professional
+                  Excellence Fellowship 2022-23.</p>
+              </li>
+              <li>
+                <p>Roja has become independent FE-SEM and XRD student user.</p>
+              </li>
+              <li>
+                <p>Prof. Shibayan Roy's NPTEL course on "Techniques of Materials characterization" is re-running.</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </section>
     <!-- ========================= End OF SWIPER SLIDER ============================ -->
     
 
@@ -99,72 +135,104 @@
     </section>
     <!-- ========================= End OF ABOUT US ============================= -->
 
-
-      <section class="news_events">
-        <div class="section_header">GROUP UPDATES</div>
-        <div class="news_events_wrapper">
-          <div class="news_events_container">
-            <ul class="container">
-              <li>
-                <p>Project on Development of wrought Al-Cu-Mn-Zr (ACMZ) alloys for high temperature (above 350degC) applications through SERB approved.</p> 
-              </li>
-              <li>
-                <p>Welcome Aniket Dutta (Project scientist-Research) to SPP group.</p> 
-              </li>
-              <li>
-                <p>Congratulations Souvik Sahoo for joining Post doc at IMDEA.</p> 
-              </li>
-              <li>
-                <p>Congratulations to Prof. Shibayan on being selected for Fulbright-Nehru Academic and Professional Excellence Fellowship 2022-23.</p> 
-              </li>
-              <li>
-                <p>Roja has become independent FE-SEM and XRD student user.</p> 
-              </li>
-              <li>
-                <p>Prof. Shibayan Roy's NPTEL course on "Techniques of Materials characterization" is re-running.</p> 
-              </li>
-            </ul>
+        <section class="feaured_work_wrapper">
+          <div class="section_header">
+            <h2>FEATURED WORK</h2>
           </div>
-        </div>
-      </section>
+          <div class="featured-work-container container">
+            <div class="featured-work-swiper swiper mySwiper">
+              <div class="subheader">
+                <h3>Research Articles</h3>
+              </div>
+              <div class="swiper-wrapper featured-work-swiper-wrapper">
+        
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/Research-articles/article1.jfif" alt="">
+                    <figcaption class="btn_type2"><a
+                        href="https://www.sciencedirect.com/science/article/abs/pii/S0921509321007632" target="_blank">Read
+                        Paper</a></figcaption>
+                  </figure>
+                </div>
+        
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/Research-articles/article2.jfif" alt="">
+                    <figcaption class="btn_type2"><a
+                        href="https://www.sciencedirect.com/science/article/abs/pii/S135964542100207X" target="_blank">Read
+                        Paper</a></figcaption>
+                  </figure>
+                </div>
+        
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/Research-articles/article3.jpg" alt="">
+                    <figcaption class="btn_type2"><a
+                        href="https://www.frontiersin.org/articles/10.3389/fmats.2020.00057/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Materials&id=506083"
+                        target="_blank">Read Paper</a></figcaption>
+                  </figure>
+                </div>
+        
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/Research-articles/article4.jpg" alt="">
+                    <figcaption class="btn_type2"><a
+                        href="https://www.sciencedirect.com/science/article/abs/pii/S1293255815000783" target="_blank">Read
+                        Paper</a></figcaption>
+                  </figure>
+                </div>
+        
+                <div class="swiper-slide">
+                  <figure>
+                    <img src="images/Research-articles/article5.png" alt="">
+                    <figcaption class="btn_type2"><a
+                        href="https://www.sciencedirect.com/science/article/abs/pii/S0925838822009021" target="_blank">Read
+                        Paper</a></figcaption>
+                  </figure>
+                </div>
+        
+              </div>
+              <div class="swiper-pagination"></div>
+            </div>
+        
+          </div>
+        
+          <!-- ====================== BOOK CHAPTERS  ======================= -->
+        
+          <div class="book-chapters">
+            <div class="container book-chapters-container">
+              <div class="section_header">
+                <h3>Book Chapters</h3>
+              </div>
+              <div class="book-details">
+                <figure>
+                  <a href="https://www.academia.edu/79476675/Additive_manufacturing_of_titanium_alloys_microstructure_and_texture_evolution_defect_formation_and_mechanical_response"
+                    target="_blank"><img src="images/Book-chapters/book-chapter.png" alt=""></a>
+                  <figcaption>
+                    <p>S. Sahoo, Shibayan Roy, Additive manufacturing of Titanium alloys: Microstructure and texture Evolution,
+                      defect formation and mechanical response, Chapter 8: Additive manufacturing: A tool for industrial
+                      revolution 4.0, Elsevier Publications (2021).</p>
+                  </figcaption>
+                </figure>
+              </div>
+        
+              <div class="book-details">
+                <figure>
+                  <a href="https://www.intechopen.com/books/10847" target="_blank"><img
+                      src="images/Book-chapters/bookchapters2.png" alt=""></a>
+                  <figcaption>
+                    <p>Roy, S., & Roy, S. (2022). New-Age Al-Cu-Mn-Zr (ACMZ) Alloy for High Temperature-High Strength
+                      Applications: A Review. Aluminium Alloys: Design and Development of Innovative Alloys, Manufacturing
+                      Processes and Applications, 21.</p>
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </div>
+        
+        </section>
 
-    <!-- ========================= End OF  GROUP UPDATES  ============================= -->
-
-
-    <div class="campus-life-members_wrapper">
-
-      <!-- -----------CAMPUS LIFE-------------- -->
-
-      <!-- <section class="campus-life_members_section container">
-        <div class="section_header">Campus Life</div>
-        <div class="campus-life_members-card">
-          <figure class="campus-life_members-content">
-            <img src="images/group-photo_refreshment-card.jpg" alt=""/>
-            <figcaption>
-              <h3>REFRESHMENTS</h3>
-              <p><a href="#">TO READ MORE ABOUT OUR CAMPUS STORIES <br> <b style="color:#ffbd00; font-size: 1.5rem;" >CLICK HERE.</b></a></p>
-            </figcaption>
-          </figure>
-        </div>
-      </section> -->
-
-      <!-- -----------MEMBERS-------------- -->
-
-      <!-- <section class="campus-life_members_section container">
-        <div class="section_header">Group Members</div>
-        <div class="campus-life_members-card">
-          <figure class="campus-life_members-content">
-            <img src="images/shibayan.jpg" alt=""/>
-            <figcaption>
-              <h3>GROUP MEMBERS</h3>
-              <p><a href="#">TO READ MORE ABOUT OUR MEMBERS <br> <b style="color:#ffbd00; font-size: 1.5rem;" >CLICK HERE.</b></a></p>
-            </figcaption>
-          </figure>
-        </div>
-      </section> -->
-      
-    </div>
-    <!-- ====================== END OF CAMPUS LIFE & MEMBERS SECTION ================ -->
+    <!-- ====================== END OF FEATURED WORK ================ -->
 
 
     <section class="group_poster">
@@ -200,13 +268,11 @@
           <div class="footer_2">
             <h4>Permalinks</h4>
             <ul class="permalinks">
-              <li><a href="#top">Home</a></li>
               <li><a href="#about_us">About</a></li>
               <li><a href="research.html">Research</a></li>
               <li><a href="contact.html">Contact</a></li>
             </ul>
           </div>
-
 
           <div class="footer_3">
             <h4>Campus</h4>
@@ -224,8 +290,16 @@
                 <p><i class='bx bx-envelope'></i><a href="mailto:sppgroup.iitkgp@gmail.com">sppgroup.iitkgp@gmail.com</a> </p>
               </li>
               <li>
-                <p><i class='bx bx-phone'></i> +91 03222 281 650</p>
+                <p><i class='bx bx-phone'></i> +91-3222-281-650</p>
               </li>
+            </ul>
+          </div>
+
+          <div class="footer_5">
+            <h4>External Links</h4>
+            <ul class="permalinks">
+              <li><a href="http://www.iitkgp.ac.in/department/MS" target="_blank">IIT | KGP Material Science</a></li> 
+              <li><a href="http://www.iitkgp.ac.in/" target="_blank">IIT | KGP Main</a></li>
             </ul>
           </div>
 
@@ -245,6 +319,13 @@
     </footer>
     <!-- ====================== END OF FOOTER ======================= -->
     
+    <!-- ========== LOADER ======== -->
+    <script>
+      var loader = document.getElementById('preloader');
+      window.addEventListener('load', function () {
+        loader.style.display = 'none';
+      })
+    </script>
 
     <!-- ============ MAIN JS ============= -->
     <script src="JS/script.js" async defer></script>
@@ -252,29 +333,41 @@
     <!-- ============JS FOR SLIDER============= -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 
-    <!-- Initialize Swiper -->
+
     <script>
-      var swiper = new Swiper(".mySwiper", {
-        spaceBetween: 0,
+      const swiper = new Swiper(".mySwiper", {
+        slidesPerView: 2,
+        spaceBetween: 20,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          300: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          // when window width is >= 601px
+          601: {
+            slidesPerView: 1,
+            spaceBetween: 10
+          },
+          // when window width is >= 1024px
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 10
+          }
+        },
+        grabCursor: true,
+        freeMode: true,
         loop: true,
-        edgeSwipeDetection: true,
-        centeredSlides: true,
         autoplay: {
-          delay: 3000,
+          delay: 2000,
           disableOnInteraction: true,
         },
         pagination: {
           el: ".swiper-pagination",
           clickable: true,
         },
-        navigation: {
-          nextEl: ".swiper-next",
-          prevEl: ".swiper-prev",
-          clickable: true,
-          followFinger: true,
-        },
       });
-      
     </script>
 
 

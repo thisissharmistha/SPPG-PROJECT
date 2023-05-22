@@ -26,6 +26,9 @@
   </head>
   <body>
 
+    <div id="preloader">
+    </div>
+
     <header>
       <div class="header_container">
     
@@ -64,7 +67,7 @@
       <div class="container">
         <div class="research-wrapper">
           <figure>
-            <img src="images/why_do_we_research.png" alt="">
+            <img src="images/about_research_work.png" alt="">
           </figure>
           <article class="description">
             <h2>About Our Research Work</h2>
@@ -354,86 +357,6 @@
     </section>
     <!-- ====================== END OF ONGOING WORK  ======================= -->
 
-   
-    <section class="feaured_work_wrapper">
-      <div class="section_header"><h2>FEATURED WORK</h2></div>
-      <div class="featured-work-container container">
-        <div class="featured-work-swiper swiper mySwiper">
-          <div class="subheader"><h3>Research Articles</h3></div>
-          <div class="swiper-wrapper featured-work-swiper-wrapper">
-            
-            <div class="swiper-slide">
-              <figure>
-                <img src="images/Research-articles/article1.jfif" alt="">
-                <figcaption class="btn_type2"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0921509321007632"
-                    target="_blank">Read Paper</a></figcaption>
-              </figure>
-            </div>
-
-            <div class="swiper-slide">
-              <figure>
-                <img src="images/Research-articles/article2.jfif" alt="">
-                <figcaption class="btn_type2"><a href="https://www.sciencedirect.com/science/article/abs/pii/S135964542100207X"
-                    target="_blank">Read Paper</a></figcaption>
-              </figure>
-            </div>
-
-            <div class="swiper-slide">
-              <figure>
-                <img src="images/Research-articles/article3.jpg" alt="">
-                <figcaption class="btn_type2"><a
-                    href="https://www.frontiersin.org/articles/10.3389/fmats.2020.00057/full?&utm_source=Email_to_authors_&utm_medium=Email&utm_content=T1_11.5e1_author&utm_campaign=Email_publication&field=&journalName=Frontiers_in_Materials&id=506083"
-                    target="_blank">Read Paper</a></figcaption>
-              </figure>
-            </div>
-
-            <div class="swiper-slide">
-              <figure>
-                <img src="images/Research-articles/article4.jpg" alt="">
-                <figcaption class="btn_type2"><a href="https://www.sciencedirect.com/science/article/abs/pii/S1293255815000783"
-                    target="_blank">Read Paper</a></figcaption>
-              </figure>
-            </div>
-
-            <div class="swiper-slide">
-              <figure>
-                <img src="images/Research-articles/article5.png" alt="">
-                <figcaption class="btn_type2"><a href="https://www.sciencedirect.com/science/article/abs/pii/S0925838822009021"
-                    target="_blank">Read Paper</a></figcaption>
-              </figure>
-            </div>
-
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-
-      <!-- ====================== BOOK CHAPTERS  ======================= -->
-
-      <div class="book-chapters">
-        <div class="container book-chapters-container">
-          <div class="section_header"><h3>Book Chapters</h3></div>
-          <div class="book-details">
-            <figure>
-              <a href="https://www.academia.edu/79476675/Additive_manufacturing_of_titanium_alloys_microstructure_and_texture_evolution_defect_formation_and_mechanical_response"  target="_blank"><img src="images/Book-chapters/book-chapter.png" alt=""></a>
-              <figcaption> <p>S. Sahoo, Shibayan Roy, Additive manufacturing of Titanium alloys: Microstructure and texture Evolution, defect formation and mechanical response, Chapter 8: Additive manufacturing: A tool for industrial revolution 4.0, Elsevier Publications (2021).</p></figcaption>
-            </figure>
-          </div>
-
-          <div class="book-details">
-            <figure>
-              <a href="https://www.intechopen.com/books/10847"  target="_blank"><img src="images/Book-chapters/bookchapters2.png" alt=""></a>
-              <figcaption> <p>Roy, S., & Roy, S. (2022). New-Age Al-Cu-Mn-Zr (ACMZ) Alloy for High Temperature-High Strength Applications: A Review. Aluminium Alloys: Design and Development of Innovative Alloys, Manufacturing Processes and Applications, 21.</p></figcaption>
-            </figure>
-          </div>
-        </div>
-      </div>
-
-    </section>
-    <!-- ====================== END OF FEATURED WORK  ======================= -->
-
-
 
     <section class="funding_collaborators funding_collaborators-accordian">
       <div class="section_header"><h2>FUNDING AND COLLABORATORS</h2></div>
@@ -594,8 +517,17 @@
                 </p>
               </li>
               <li>
-                <p><i class='bx bx-phone'></i> +91 03222 281 650</p>
+                <p><i class='bx bx-phone'></i> +91-3222-281-650</p>
               </li>
+            </ul>
+          </div>
+
+
+          <div class="footer_5">
+            <h4>External Links</h4>
+            <ul class="permalinks">
+              <li><a href="http://www.iitkgp.ac.in/department/MS" target="_blank">IIT | KGP Material Science</a></li>
+              <li><a href="http://www.iitkgp.ac.in/" target="_blank">IIT | KGP Main</a></li>
             </ul>
           </div>
     
@@ -616,6 +548,14 @@
     </footer>
     <!-- ====================== END OF FOOTER======================= -->
     
+
+    <!-- ========== LOADER ======== -->
+    <script>
+      var loader = document.getElementById('preloader');
+      window.addEventListener('load', function () {
+        loader.style.display = 'none';
+      })
+    </script>
 
     <!-- ============ MAIN JS ============= -->
 
