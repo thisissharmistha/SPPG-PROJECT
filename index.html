@@ -25,7 +25,9 @@
   <body>
 
     <div id="preloader">
+      <div class="loader"></div>
     </div>
+    <!--========= End of Loader ===========  -->
 
     <header>
       <div class="header_container">
@@ -318,16 +320,12 @@
     </footer>
     <!-- ====================== END OF FOOTER ======================= -->
     
-    <!-- ========== LOADER ======== -->
+    <!-- ========== LOADER with Jquery======== -->
     <script>
-      var loader = document.getElementById('preloader');
-      window.addEventListener('load', function () {
-        loader.style.display = 'none';
-      })
+      window.addEventListener('load', function(){
+        $('#preloader').fadeToggle();
+      }) 
     </script>
-
-    <!-- ============ MAIN JS ============= -->
-    <script src="dist/js/script.js" async defer></script>
     
     <!-- ============JS FOR SLIDER============= -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
@@ -369,7 +367,8 @@
       });
     </script>
 
-
+      <!-- ============ MAIN JS ============= -->
+      <script src="dist/js/script.js" async defer></script>
 
   </body>
 </html>

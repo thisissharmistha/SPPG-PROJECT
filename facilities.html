@@ -24,7 +24,9 @@
   <body>
 
     <div id="preloader">
+      <div class="loader"></div>
     </div>
+    <!--========= End of Loader ===========  -->
 
     <header>
       <div class="header_container">
@@ -1098,13 +1100,11 @@
     </footer>
     <!-- ====================== END OF FOOTER======================= -->
     
-
-    <!-- ========== LOADER ======== -->
+    <!-- ========== LOADER with Jquery======== -->
     <script>
-      var loader = document.getElementById('preloader');
       window.addEventListener('load', function () {
-        loader.style.display = 'none';
-      })
+        $('#preloader').fadeToggle();
+      }) 
     </script>
 
     <!-- ============ MAIN JS ============= -->
