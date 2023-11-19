@@ -1,0 +1,1 @@
+$((function(){var a=location.pathname;$("#navbar li a").each((function(){var n=$(this);-1!==n.attr("href").indexOf(a)&&n.addClass("active")}))}));

@@ -1,0 +1,1152 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary: #03045e;
+  --color-lightBlue: #a2d2ff;
+  --color-lightBlue-variant: #cbe7ff;
+  --color-white: #fff;
+  --color-yellow: #ffbd00;
+  --color-black: #000;
+  --color-transparent-white: rgba(255, 255, 255, 0.7);
+  --color-transparent-primary: rgba(3, 4, 94, 0.7);
+  --color-body: #ebf4ff;
+
+
+  --container-max-width-lg: 80em;
+  --container-width-lg: 80%;
+  --container-max-width-md: 50em;
+  --container-width-md: 90%;
+  --container-max-width-sm: 28em;
+  --container-width-sm: 95%;
+
+  --transition: all 400ms ease;
+
+  --box-shadow1: 5px 5px 11px 3px rgb(0 0 0 / 20%);
+  --box-shadow2: inset 2px 1px 5px 2px rgba(2, 3, 93, 0.1);
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1.7;
+  color: var(--color-primary);
+  background: var(--color-white);
+  clear: both;
+}
+
+.container {
+  max-width: var(--container-max-width-lg);
+  width: var(--container-width-lg);
+  margin: 0 auto;
+}
+
+section {
+  text-align: center;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+a {
+  color: var(--color-white);
+}
+
+p {
+  font-size: 1rem;
+}
+
+img {
+  max-width: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.btn {
+  display: inline-block;
+  width: 10rem;
+  height: auto;
+  color: var(--color-white);
+  background: var(--color-primary);
+  padding: 0.5rem;
+  border: 2px solid var(--color-primary);
+  font-weight: 600;
+  transition: all 100ms ease-in-out;
+}
+
+.btn:hover {
+  background: var(--color-yellow);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  box-shadow: var(--box-shadow1);
+}
+
+.btn_type2 {
+  display: inline-block;
+  color: var(--color-white);
+  background: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  border-radius: 10px;
+  width: 10rem;
+  padding: 0.5rem 0;
+  font-weight: 600;
+  transition: all 100ms ease-in-out;
+  text-align: center;
+}
+
+.btn_type2:hover {
+  background: var(--color-yellow);
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  box-shadow: 8px 6px 11px 3px rgb(0 0 0 / 20%);
+  transform: translateY(4px);
+}
+
+.section_header {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+
+/* ================ Loader ================= */
+#preloader {
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  background: var(--color-body);
+}
+
+.loader {
+  border: 0 solid transparent;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: calc(50vh - 75px);
+  left: calc(50vw - 75px);
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  border: 1em solid var(--color-primary);
+  border-radius: 50%;
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+  animation: loader 2s linear infinite;
+  opacity: 0;
+}
+
+.loader::before {
+  animation-delay: 0.5s;
+}
+
+@keyframes loader {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+
+/* ================== HEADER ==================*/
+
+header {
+  background-color: var(--color-white);
+  overflow: hidden;
+  height: auto;
+}
+
+.header_container {
+  text-align: center;
+}
+
+.header_container ul {
+  width: 100%;
+  height: auto;
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 1rem;
+}
+
+.header_container ul li:nth-child(1) img {
+  width: 10rem;
+}
+
+.header_container ul li p {
+  color: var(--color-black);
+  font-weight: 600;
+}
+
+.header_container ul li:nth-child(3) img {
+  width: 6rem;
+}
+
+
+/* ================== NAVBAR ==================*/
+#navbar {
+  background: var(--color-primary);
+  width: 100%;
+  height: 3.2rem;
+  overflow: hidden;
+  z-index: 111;
+}
+
+/*-------linked with activePage JS --------- */
+#navbar .nav_menu li a:is(:link, :active, :visited).active {
+  background: transparent;
+  color: var(--color-yellow);
+  border-bottom: 3px solid var(--color-yellow);
+}
+
+/* -------linked with activePage JS --------- */
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+/* Add some top padding to the page content to prevent sudden quick movement as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+.sticky+.content {
+  padding-top: 60px;
+}
+
+
+/* v v v v NAV BUTTONS FOR MOBILE & TABS v v v v */
+#navbar #open-menu-btn,
+#navbar #close-menu-btn {
+  display: none;
+}
+
+/* ^ ^ ^ ^ NAV BUTTONS FOR MOBILE & TABS ^ ^ ^ ^ */
+.nav_menu {
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0 auto;
+}
+
+.nav_menu a {
+  font-size: 1.1rem;
+  transition: var(--transition);
+  text-align: center;
+}
+
+#navbar ul>li .btn:hover {
+  background: transparent;
+  color: var(--color-yellow);
+  border-bottom: 2px solid var(--color-yellow);
+}
+
+/* =============== LAB FACILITIES ================== */
+
+.metalography_container,
+.microscopy_container,
+.mechanical-testing_container,
+.advanced-structural_container,
+.heat-treatment_container,
+.melting-facilities_container,
+.materials-processings_container,
+.electrical-testing_container {
+  height: auto;
+  background: var(--color-primary);
+  padding: 1rem 0;
+  overflow: hidden;
+}
+
+.metalography_container .section_header,
+.microscopy_container .section_header,
+.mechanical-testing_container .section_header,
+.advanced-structural_container .section_header,
+.heat-treatment_container .section_header,
+.melting-facilities_container .section_header,
+.materials-processings_container .section_header,
+.electrical-testing_container .section_header {
+  color: var(--color-white);
+  font-size: 1.6rem;
+}
+
+.metallography_content,
+.microscopy_content,
+.mechanical-testing_content,
+.advanced-structural_content,
+.heat-treatment__content,
+.melting-facilities__content,
+.materials-processing__content,
+.electrical-testing__content {
+  width: calc(100% - 2rem);
+  height: auto;
+  background-color: none;
+  margin: 1rem auto;
+  padding: 1rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+
+
+/* --------- Setting the Gradient and text over image----------- */
+
+/* ---------FLIP CARD----------- */
+.flip-card {
+  background-color: transparent;
+  width: 23rem;
+  height: 25rem;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+  box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+  margin: 0 auto;
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 1s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container  */
+ .flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* Position the front and back side */
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  background: var(--color-primary);
+  color: var(--color-white);
+}
+
+.flip-card-front figure {
+  width: 18rem;
+  height: 24rem;
+  background-color: none;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.flip-card-front figure img {
+  object-fit: contain;
+  width: 20rem;
+}
+
+.flip-card-front figure figcaption {
+  position: relative;
+  margin-top: 5px;
+  color: var(--color-white);
+  font-size: 1.1rem;
+  font-weight: 600;
+  z-index: 1;
+  line-height: 1.3;
+} 
+
+
+/* Style the back side */
+.flip-card-back {
+  background: var(--color-primary);
+  color: var(--color-yellow);
+  transform: rotateY(180deg);
+  padding: 1rem 1.5rem;
+  text-align: left;
+}
+
+.flip-card-back ul {
+  padding: 1rem 0;
+}
+
+.flip-card-back ul li {
+  text-align: justify;
+  color: var(--color-white);
+}
+
+/* Used click-event to flip the cards with JS for small screens */
+.flipped {
+  transform: none;
+}
+
+/* accordian header icon for small screen (300px-600px) */
+.lab_facilities-accordian-header i {
+  display: none;
+}
+
+/* ============= SOFTWARES ================== */
+
+.software_container {
+  height: auto;
+  background: var(--color-primary);
+  margin-bottom: 2rem;
+  padding: 2rem 4rem;
+  overflow: hidden;
+}
+
+.software_content ul {
+  background: none;
+  margin: 1rem auto;
+  color: var(--color-white);
+  font-weight: 500;
+}
+
+.software_content ul li {
+  font-size: 1.1rem;
+  text-align: justify;
+  padding: 1rem 0 0 0;
+  list-style: disc;
+}
+
+/* ================== FOOTER ==================*/
+
+footer {
+  background: var(--color-primary);
+  padding-top: 2rem;
+  text-align: left;
+  border-top: 10px inset var(--color-white);
+  overflow: hidden;
+}
+
+.footer_container {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 3rem;
+}
+
+.footer_container>div h4 {
+  margin-bottom: 1.2rem;
+  color: var(--color-yellow);
+}
+
+.footer_container>div a:hover {
+  color: var(--color-yellow);
+}
+
+.footer_container ul {
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.footer_logo img {
+  width: 4.5rem;
+  text-align: left;
+  background: var(--color-white);
+}
+
+footer ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer_4 .contact_us li p {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+.footer_4 .contact_us i {
+  margin-right: 5px;
+  font-size: 1.4rem;
+  align-self: center;
+}
+
+
+/* <!-- ------------FOR SOCIAL HANDELS-------------> */
+
+.footer_socials {
+  position: fixed;
+  top: 50%;
+  left: 0%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 999;
+}
+
+.footer_socials a {
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+  color: white;
+  z-index: 999;
+  background: var(--color-white);
+}
+
+.footer_socials a i:hover {
+  background-color: #000;
+}
+
+.footer_socials li .bxl-youtube {
+  color: white;
+  background: red;
+  padding: 0.60rem;
+  font-size: 2.2rem;
+}
+
+/*===========COPYRIGHT=========== */
+
+.footer_copyright {
+  text-align: center;
+  margin-top: 1rem;
+  padding: 0.5rem 0;
+  border-top: 1px solid var(--color-white);
+}
+
+
+/* ================== MEDIA QUERY TABLETS ==================*/
+
+/* tablet portrait*/
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) 
+{
+
+  .container {
+    max-width: var(--container-max-width-md);
+    width: var(--container-width-md);
+  }
+
+  body {
+    position: relative;
+    clear: both;
+  }
+
+  section {
+    margin-top: 0.5rem;
+    padding-top: 1rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+  a {
+    font-size: 1rem;
+  }
+
+  .btn {
+    width: 8rem;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .btn_type2 {
+    width: 8rem;
+  }
+
+  .section_header {
+    font-size: 1.65rem;
+  }
+
+  /* --------------- HEADER -----------------*/
+  .header_container ul li:nth-child(1) img {
+    width: 7rem;
+  }
+
+  .header_container ul li p {
+    font-weight: 600;
+  }
+
+  .header_container ul li:nth-child(3) img {
+    width: 4.5rem;
+  }
+
+
+  /* ================== NAVBAR ==================*/
+  #navbar {
+    position: relative;
+    overflow: visible;
+    z-index: 99;
+    height: 3rem;
+  }
+
+  .navbar_buttons {
+    height: inherit;
+  }
+
+  #navbar #open-menu-btn,
+  #navbar #close-menu-btn {
+    display: contents;
+    font-size: 3rem;
+    font-weight: 600;
+    color: var(--color-white);
+    cursor: pointer;
+    animation: animateNavItems 400ms linear forwards;
+  }
+
+  #navbar #close-menu-btn {
+    display: none;
+    font-size: 3rem;
+  }
+
+  .nav_menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--color-transparent-white);
+    box-shadow: var(--box-shadow1);
+    float: left;
+    padding: 1rem;
+  }
+
+  .nav_menu li {
+    animation: animateNavItems 400ms linear forwards;
+    transform-origin: top left;
+    opacity: 0;
+    margin: 0.4rem auto;
+    z-index: 111;
+  }
+
+  .nav_menu li .btn {
+    width: 20rem;
+  }
+
+  #navbar .nav_menu li a:is(:link, :active, :visited).active {
+    background: var(--color-primary);
+    color: none;
+    border-bottom: none;
+  }
+
+  #navbar ul>li .btn:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  /* ----------- nav menu animation ---------- */
+  .nav_menu li:nth-child(2) {
+    animation-delay: 200ms;
+  }
+
+  .nav_menu li:nth-child(3) {
+    animation-delay: 400ms;
+  }
+
+  .nav_menu li:nth-child(4) {
+    animation-delay: 600ms;
+  }
+
+  .nav_menu li:nth-child(5) {
+    animation-delay: 800ms;
+  }
+
+  @keyframes animateNavItems {
+    from {
+      transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+    }
+
+    to {
+      transform: rotateZ(0) rotateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* ================== LAB FACILITIES =============== */
+  .metallography_content,
+  .microscopy_content,
+  .mechanical-testing_content,
+  .advanced-structural_content,
+  .heat-treatment__content,
+  .melting-facilities__content,
+  .materials-processing__content,
+  .electrical-testing__content {
+    grid-template-columns: 1fr 1fr;
+    margin: 0.5rem auto;
+    padding: 0;
+  }
+
+  /* --------- Setting the Gradient and text over image----------- */
+
+  /* ---------FLIP CARD----------- */
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 22rem;
+  }
+
+  .flip-card-front figure {
+    width: 95%;
+    height: 100%;
+  }
+
+  .flip-card-front figure img {
+    width: 18rem;
+  }
+
+  .flip-card-front figure figcaption {
+  margin-top: 0;
+  line-height: 1;
+  } 
+
+  /* Style the back side */
+  .flip-card-back {
+    width: 100%;
+    height: 90%;
+  }
+  .flip-card-back ul {
+    padding: 0.5rem;
+  }
+
+  .flip-card-back ul li {
+    font-size: 0.85rem;
+  }
+
+  /* STOP horizontal flip for tablet and mobile screens on hover */
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+
+  /* Used click-event to flip the cards with JS for small screens */
+  .flipped {
+    transform: rotateY(180deg)!important;
+  }
+
+
+  /* ================== FOOTER ==================*/
+
+  .footer_container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    font-size: 1.1rem;
+    padding: 0 2rem;
+  }
+
+  .footer_container>div h4 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2rem;
+    color: var(--color-yellow);
+  }
+
+}
+
+
+/* ================== media query MOBILES ==================*/
+
+/* phone portrait mode */
+@media only screen and (min-width: 300px) and (max-width: 600px) {
+
+  .container {
+    max-width: var(--container-max-width-sm);
+    width: var(--container-width-sm);
+  }
+
+  body {
+    position: relative;
+    clear: both;
+  }
+
+  section {
+    margin-top: 0.5rem;
+    padding-top: 0rem;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  h2 {
+    font-size: 1.1rem;
+  }
+
+  h3 {
+    font-size: 0.9rem;
+  }
+
+  h4 {
+    font-size: 0.9rem;
+  }
+
+  a {
+    font-size: 0.75rem;
+  }
+
+  p {
+    font-size: 0.75rem;
+  }
+
+  .btn {
+    width: 6rem;
+    height: auto;
+    padding: 0.5rem;
+  }
+
+  .btn_type2 {
+    border-radius: 5px;
+    width: 6rem;
+    padding: 0.2rem 0;
+  }
+
+  .section_header {
+    font-size: 1rem;
+  }
+
+  /* ================== HEADER ==================*/
+  .header_container ul {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 0.4rem;
+    padding: 0.5rem 0;
+  }
+
+  .header_container ul li:nth-child(1) img {
+    width: 5rem;
+  }
+
+  .header_container ul li h2 {
+    font-size: 1rem;
+  }
+
+  .header_container ul li p {
+    padding: 0 2rem;
+    font-size: 0.65rem;
+  }
+
+  .header_container ul li:nth-child(3) img {
+    width: 2.5rem;
+  }
+
+
+  /* ================== NAVBAR ==================*/
+  #navbar {
+    position: relative;
+    overflow: visible;
+    z-index: 99;
+    height: 2rem;
+  }
+
+  .navbar_buttons {
+    height: inherit;
+  }
+
+  #navbar #open-menu-btn,
+  #navbar #close-menu-btn {
+    display: contents;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--color-white);
+    cursor: pointer;
+    animation: animateNavItems 400ms linear forwards;
+  }
+
+  #navbar #close-menu-btn {
+    display: none;
+  }
+
+  .nav_menu {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--color-transparent-white);
+    box-shadow: var(--box-shadow1);
+    float: left;
+    padding: 1rem;
+    left: 0;
+  }
+
+  .nav_menu li {
+    animation: animateNavItems 400ms linear forwards;
+    transform-origin: top left;
+    opacity: 0;
+    margin: 0.4rem auto;
+    z-index: 111;
+  }
+
+  .nav_menu li .btn {
+    width: 15rem;
+    font-size: 0.8rem;
+  }
+
+  /* -------linked with activePage JS --------- */
+  #navbar .nav_menu li a:is(:link, :active, :visited).active {
+    background: var(--color-primary);
+    border-bottom: none;
+  }
+
+  #navbar ul>li .btn:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+  }
+
+  /* ----------- nav menu animation ---------- */
+  .nav_menu li:nth-child(2) {
+    animation-delay: 200ms;
+  }
+
+  .nav_menu li:nth-child(3) {
+    animation-delay: 400ms;
+  }
+
+  .nav_menu li:nth-child(4) {
+    animation-delay: 600ms;
+  }
+
+  .nav_menu li:nth-child(5) {
+    animation-delay: 800ms;
+  }
+
+  @keyframes animateNavItems {
+    from {
+      transform: rotateZ(-90deg) rotateX(90deg) scale(0.1);
+    }
+
+    to {
+      transform: rotateZ(0) rotateX(0) scale(1);
+      opacity: 1;
+    }
+  }
+
+  /* ===============LAB FACILITIES==================*/
+  .metalography_container,
+  .microscopy_container,
+  .mechanical-testing_container,
+  .advanced-structural_container,
+  .heat-treatment_container,
+  .melting-facilities_container,
+  .materials-processings_container,
+  .electrical-testing_container {
+    padding: 1rem;
+  }
+
+  .metalography_container .section_header,
+  .microscopy_container .section_header,
+  .mechanical-testing_container .section_header,
+  .advanced-structural_container .section_header,
+  .heat-treatment_container .section_header,
+  .melting-facilities_container .section_header,
+  .materials-processings_container .section_header,
+  .electrical-testing_container .section_header {
+    font-size: 0.85rem;
+  }
+
+  .metallography_content,
+  .microscopy_content,
+  .mechanical-testing_content,
+  .advanced-structural_content,
+  .heat-treatment__content,
+  .melting-facilities__content,
+  .materials-processing__content,
+  .electrical-testing__content {
+    margin: 0  auto;
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  /* --------- Setting the Gradient and text over image----------- */
+
+  /* ---------FLIP CARD----------- */
+  .flip-card {
+    background-color: transparent;
+    width: 100%;
+    height: 18rem;
+    margin-bottom: 1rem;
+  }
+
+  .flip-card-front figure {
+    width: 95%;
+    height: 100%;
+  }
+
+  .flip-card-front figure img {
+    width: 14rem;
+  }
+
+  .flip-card-front figure figcaption {
+    margin-top: 0;
+    line-height: 1.3;
+    font-size: 0.9rem;
+  }
+
+  /* Style the back side */
+  .flip-card-back {
+    width: 100%;
+    height: 95%;
+  }
+
+  .flip-card-back ul {
+    padding: 0.5rem;
+  }
+
+  .flip-card-back ul li {
+    font-size: 0.65rem;
+  }
+
+  /* STOP horizontal flip for tablet and mobile screens on hover */
+  .flip-card:hover .flip-card-inner {
+    transform: none;
+  }
+
+  /* Used click-event to flip the cards with JS for small screens */
+  .flipped {
+    transform: rotateY(180deg) !important;
+  }
+
+  /* ----- Accordian Lab facilities styling ------ */
+  .lab_facilities-accordian-header {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 89% 9%;
+    gap: 1%;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: left;
+  }
+
+  .lab_facilities-accordian-header i {
+    display: block;
+    font-size: 1.5rem;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .lab_facilities-accordian-header i.fa-angle-up {
+    transform: rotate(180deg);
+  }
+
+  .lab_facilities-accordian-content {
+    display: none;
+  }
+
+  .lab_facilities-accordian-content.active {
+    display: block;
+  }
+
+  /* ============= SOFTWARES ================== */
+
+  .software_container {
+    margin-bottom: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .software_content ul {
+    margin: 1rem auto;
+    font-weight: 500;
+  }
+
+  .software_content ul li {
+    font-size: 0.65rem;
+    padding: 0.5rem 0 0 0;
+  }
+
+
+  /* ================== FOOTER ==================*/
+  footer {
+    padding-top: 1rem;
+  }
+
+  .footer_container {
+    padding: 0 0.5rem;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 1rem;
+  }
+
+  .footer_container>div h4 {
+    margin-bottom: 1rem;
+  }
+
+  .footer_logo img {
+    width: 3rem;
+  }
+
+  .footer_2,
+  .footer_3 {
+    line-height: 1;
+  }
+
+  .footer_4 .contact_us i {
+    font-size: 1rem;
+  }
+
+  /* <!-------------FOR SOCIAL HANDELS-------------> */
+  .footer_socials li .bxl-youtube {
+    font-size: 1.2rem;
+  }
+
+  /* ===========COPYRIGHT=========== */
+  .footer_copyright {
+    margin-top: 1rem;
+    padding: 1rem 0;
+    font-size: 0.7rem;
+  }
+
+}
+
+
